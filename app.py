@@ -35,9 +35,9 @@ st.write("An interactive comparison of Off-Policy and On-Policy reinforcement le
 # --- Sidebar Parameters ---
 with st.sidebar:
     st.header("⚙️ Training Parameters")
-    episodes = st.slider("Episodes", 100, 2000, 500, step=100)
+    episodes = st.slider("Episodes", 500, 2000, 500, step=100)
     alpha = st.slider("Learning Rate (α)", 0.01, 1.0, 0.5)
-    gamma = st.slider("Discount Factor (γ)", 0.5, 1.0, 0.9)
+    gamma = st.slider("Discount Factor (γ)", 0.5, 1.0, 0.99)
     epsilon = st.slider("Exploration Rate (ε)", 0.01, 0.5, 0.1)
     num_runs = st.slider("Number of Runs to Average", 1, 50, 10)
     
