@@ -1,0 +1,21 @@
+schema: spec-driven
+
+context: |
+  Change Numbering Rule:
+  All changes in this project must be prefixed with a two-digit number starting from 01 (e.g., 01-init, 02-add-feature).
+  When creating a new change, check the existing folders in openspec/changes/ and use the next number in sequence.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+rules:
+  change:
+    - Change directories must be prefixed with a two-digit sequence number starting from 01 (e.g., 01-my-change).
+    - Always increment the number based on the existing changes in openspec/changes/.

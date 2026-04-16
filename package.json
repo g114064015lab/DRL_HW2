@@ -1,0 +1,8 @@
+{
+  "name": "drl-hw2",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:start": "bash startup.sh",
+    "dev:ending": "bash ending.sh"
+  }
+}
