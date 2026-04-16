@@ -1,6 +1,6 @@
 # Cliff Walking: Q-Learning vs SARSA
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://drlhw2-gmfyrfappaingv6wuj72s2k.streamlit.app/)
+## 🚀DEMO:https://drlhw2-gmfyrfappaingv6wuj72s2k.streamlit.app/
 
 A Reinforcement Learning project focused on implementing and comparing two classic Temporal Difference algorithms: **Q-Learning (Off-policy)** and **SARSA (On-policy)** using the Cliff Walking Gridworld environment.
 
