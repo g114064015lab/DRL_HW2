@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+st.write(f"Debug: matplotlib version {matplotlib.__version__} successfully imported")
 from env import CliffWalkingEnv
 from experiment import run_experiment, get_optimal_path
 from visualization import plot_rewards, visualize_grid_path
