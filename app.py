@@ -31,6 +31,10 @@ st.markdown("""
         padding: 20px;
         border-radius: 10px;
         margin-bottom: 20px;
+        color: #000000 !important;
+    }
+    .theory-box h3, .theory-box p, .theory-box b {
+        color: #000000 !important;
     }
     </style>
     """, unsafe_allow_html=True)
