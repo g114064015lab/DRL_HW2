@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-st.write(f"Debug: matplotlib version {matplotlib.__version__} successfully imported")
 from env import CliffWalkingEnv
 from experiment import run_experiment, get_optimal_path
 from visualization import plot_rewards, visualize_grid_path
@@ -37,9 +36,10 @@ st.write("An interactive comparison of Off-Policy and On-Policy reinforcement le
 with st.sidebar:
     st.header("⚙️ Training Parameters")
     episodes = st.slider("Episodes", 100, 2000, 500, step=100)
-    alpha = st.slider("Learning Rate (α)", 0.01, 0.5, 0.1)
+    alpha = st.slider("Learning Rate (α)", 0.01, 1.0, 0.5)
     gamma = st.slider("Discount Factor (γ)", 0.5, 1.0, 0.9)
     epsilon = st.slider("Exploration Rate (ε)", 0.01, 0.5, 0.1)
+    num_runs = st.slider("Number of Runs to Average", 1, 50, 10)
     
     run_btn = st.button("🚀 Run Experiment", use_container_width=True)
 
@@ -48,8 +48,8 @@ tab1, tab2, tab3 = st.tabs(["📊 Performance", "🗺️ Learned Paths", "📖 T
 
 if run_btn:
     with st.spinner("Training agents..."):
-        q_agent, q_rewards = run_experiment('q_learning', episodes, alpha, gamma, epsilon)
-        s_agent, s_rewards = run_experiment('sarsa', episodes, alpha, gamma, epsilon)
+        q_agent, q_rewards = run_experiment('q_learning', episodes, alpha, gamma, epsilon, num_runs)
+        s_agent, s_rewards = run_experiment('sarsa', episodes, alpha, gamma, epsilon, num_runs)
         
         env = CliffWalkingEnv()
         q_path = get_optimal_path(q_agent, env)
